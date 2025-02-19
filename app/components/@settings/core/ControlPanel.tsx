@@ -186,7 +186,11 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
 
     const notificationsDisabled = profile?.preferences?.notifications === false;
 
-    // In developer mode, show ALL tabs without restrictions
+    /*
+     * In developer mode, show ALL tabs without restrictions
+     * Changed to 0 to disable developer mode
+     *    if (developerMode) {
+     */
     if (developerMode) {
       const seenTabs = new Set<TabType>();
       const devTabs: ExtendedTabConfig[] = [];
@@ -465,7 +469,7 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
                   </div>
 
                   <div className="flex items-center gap-6">
-                    {/* Mode Toggle */}
+                    {/* Mode Toggle -- hiding toggle */}
                     <div className="flex items-center gap-2 min-w-[140px] border-r border-gray-200 dark:border-gray-800 pr-6">
                       <AnimatedSwitch
                         id="developer-mode"
