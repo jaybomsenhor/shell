@@ -199,12 +199,15 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
       const processTab = (tab: BaseTabConfig) => {
         if (!seenTabs.has(tab.id)) {
           seenTabs.add(tab.id);
-          devTabs.push({
-            id: tab.id,
-            visible: true,
-            window: 'developer',
-            order: tab.order || devTabs.length,
-          });
+
+          /*
+           *          devTabs.push({
+           *            id: tab.id,
+           *            visible: true,
+           *            window: 'developer',
+           *            order: tab.order || devTabs.length,
+           *          });
+           */
         }
       };
 
@@ -213,14 +216,16 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
       tabConfiguration.userTabs.forEach((tab) => processTab(tab as BaseTabConfig));
       DEFAULT_TAB_CONFIG.forEach((tab) => processTab(tab as BaseTabConfig));
 
-      // Add Tab Management tile
-      devTabs.push({
-        id: 'tab-management' as TabType,
-        visible: true,
-        window: 'developer',
-        order: devTabs.length,
-        isExtraDevTab: true,
-      });
+      /*
+       * Add Tab Management tile
+       *      devTabs.push({
+       *        id: 'tab-management' as TabType,
+       *        visible: true,
+       *        window: 'developer',
+       *        order: devTabs.length,
+       *        isExtraDevTab: true,
+       *      });
+       */
 
       return devTabs.sort((a, b) => a.order - b.order);
     }
@@ -475,7 +480,7 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
                         id="developer-mode"
                         checked={developerMode}
                         onCheckedChange={handleDeveloperModeChange}
-                        label={developerMode ? 'Developer Mode' : 'User Mode'}
+                        label={developerMode ? 'Comming Soon' : 'User Mode'}
                       />
                     </div>
 

@@ -84,5 +84,5 @@ export const DEFAULT_TAB_CONFIG = [
   { id: 'task-manager', visible: true, window: 'developer' as const, order: 9 },
   { id: 'service-status', visible: true, window: 'developer' as const, order: 10 },
   { id: 'debug', visible: true, window: 'developer' as const, order: 11 },
-  { id: 'update', visible: true, window: 'developer' as const, order: 12 },
+  { id: 'update', visible: false, window: 'developer' as const, order: 12 },
 ];
