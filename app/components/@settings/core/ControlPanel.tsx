@@ -201,6 +201,8 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
           seenTabs.add(tab.id);
 
           /*
+           *  COMMENTED TO DISABLE developerMode
+           *
            *          devTabs.push({
            *            id: tab.id,
            *            visible: true,
