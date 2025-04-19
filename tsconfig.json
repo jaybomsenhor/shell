@@ -22,10 +22,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./app/*"],
-      "crypto": [
-        "node_modules/crypto-js"
-      ]
+      "~/*": ["./app/*"]
     },
     // vite takes care of building everything, not tsc
     "noEmit": true
